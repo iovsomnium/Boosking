@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "85288284524",
+    "firebase_url": "https://che-ti-ble-e1030.firebaseio.com",
+    "project_id": "che-ti-ble-e1030",
+    "storage_bucket": "che-ti-ble-e1030.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85288284524:android:88886efe7e94263b0b4349",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85288284524-9j329rts93lk96g292t9o9dna1al32jc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9M9I6enbVqiwF44C74I4mzm4WYAVn-Hk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85288284524-9j329rts93lk96g292t9o9dna1al32jc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
