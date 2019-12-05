@@ -8,22 +8,23 @@
 
     <TextView
         android:id="@+id/text1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_width="600dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
         android:gravity="center_horizontal"
         android:text="Create \nYour Account!"
         android:textColor="#000000"
         android:textSize="55dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/Name"
         android:layout_width="400dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="80dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
         android:hint="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,8 +33,8 @@
     <EditText
         android:id="@+id/email"
         android:layout_width="400dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="58dp"
         android:hint="Email Adress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,8 +43,8 @@
     <EditText
         android:id="@+id/password"
         android:layout_width="400dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="58dp"
         android:hint="Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +53,7 @@
     <Button
         android:id="@+id/create"
         android:layout_width="310dp"
-        android:layout_height="50dp"
+        android:layout_height="0dp"
         android:background="#e6e8eb"
         android:text="Create"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -62,7 +63,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.442" />
+        app:layout_constraintVertical_bias="0.442"
+        app:layout_constraintDimensionRatio="5"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
