@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "593095416066",
+    "firebase_url": "https://che-ti-ble-ex.firebaseio.com",
+    "project_id": "che-ti-ble-ex",
+    "storage_bucket": "che-ti-ble-ex.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593095416066:android:d7a76aec284f7ad7718a1b",
+        "android_client_info": {
+          "package_name": "com.example.che_ti_bleEX"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "593095416066-4a1fi7qqqejj097ous6f330rj1okb4ct.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.che_ti_bleEX",
+            "certificate_hash": "8a2a197d4b2c605ed97c406d94fb7d9513d55ebe"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqxYQ_-on2biUdWaGTAw366B8KuxyDEho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593095416066:android:a55d71ea048a8f2c718a1b",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqxYQ_-on2biUdWaGTAw366B8KuxyDEho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
