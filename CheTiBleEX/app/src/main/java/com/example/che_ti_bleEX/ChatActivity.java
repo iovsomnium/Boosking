@@ -55,7 +55,7 @@ public class ChatActivity extends AppCompatActivity {
 
         arrayList = new ArrayList<>();
 
-        mainAdapter = new MainAdapter(arrayList,email);
+        mainAdapter = new MainAdapter(arrayList);
         recyclerView.setAdapter(mainAdapter);
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
