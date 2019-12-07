@@ -18,8 +18,15 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button signin;
+    Button signin,signup;
     private FirebaseAuth mAuth;
+
+
+    public void goToSignUpForm(View view)
+    {
+        Intent intent = new Intent(this, SignupActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         signin = (Button)findViewById(R.id.signin);
+        signup = (Button)findViewById(R.id.signup);
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToSignUpForm(view);
+            }
+        });
+
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,11 +81,5 @@ public class MainActivity extends AppCompatActivity {
                         // ...
                     }
                 });
-    }
-
-    public void goToSignUpForm(View view)
-    {
-        Intent intent = new Intent(this, SignupActivity.class);
-        startActivity(intent);
     }
 }
