@@ -7,18 +7,6 @@
     tools:context=".MainActivity">
 
     <ImageView
-<<<<<<< Updated upstream
-        android:layout_width="289dp"
-        android:layout_height="262dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="48dp"
-        android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952" />
-=======
         android:id="@+id/imageView"
         android:layout_width="310dp"
         android:layout_height="310dp"
@@ -29,81 +17,48 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
->>>>>>> Stashed changes
 
     <EditText
         android:id="@+id/username"
         android:layout_width="400dp"
         android:layout_height="70dp"
-<<<<<<< Updated upstream
-        android:layout_marginBottom="48dp"
-        android:hint="ID"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
-=======
         android:layout_marginTop="28dp"
         android:hint="ID"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
->>>>>>> Stashed changes
 
     <EditText
         android:id="@+id/password"
         android:layout_width="400dp"
         android:layout_height="70dp"
-<<<<<<< Updated upstream
-        android:layout_marginBottom="72dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/signin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-=======
         android:layout_marginTop="30dp"
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
->>>>>>> Stashed changes
 
     <Button
         android:id="@+id/signin"
         android:layout_width="310dp"
         android:layout_height="50dp"
-<<<<<<< Updated upstream
-        android:layout_marginBottom="268dp"
-=======
         android:layout_marginTop="80dp"
->>>>>>> Stashed changes
         android:background="#e6e8eb"
         android:text="Sign In"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="#000000"
         android:textSize="25dp"
-<<<<<<< Updated upstream
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-=======
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
->>>>>>> Stashed changes
 
     <TextView
         android:id="@+id/textOr"
         android:layout_width="19dp"
         android:layout_height="27dp"
-<<<<<<< Updated upstream
-        android:layout_marginTop="32dp"
-=======
         android:layout_marginTop="28dp"
->>>>>>> Stashed changes
         android:text="or"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,21 +71,12 @@
         android:layout_height="50dp"
         android:background="#e6e8eb"
         android:text="Sign up"
-<<<<<<< Updated upstream
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-=======
->>>>>>> Stashed changes
         android:textColor="#000000"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textOr"
-<<<<<<< Updated upstream
-        app:layout_constraintVertical_bias="0.169"
-        android:onClick="goToSignUpForm"/>
-=======
         app:layout_constraintVertical_bias="0.19999999" />
->>>>>>> Stashed changes
 
 </androidx.constraintlayout.widget.ConstraintLayout>

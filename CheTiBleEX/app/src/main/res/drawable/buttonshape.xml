@@ -7,13 +7,7 @@
         android:width="1dp"
         android:color="#ffffff"/>
     <size
-<<<<<<< Updated upstream
-        android:width="200dp"
-        android:height="200dp" />
-    <corners android:radius="100dp" />
-=======
         android:width="300dp"
         android:height="300dp" />
     <corners android:radius="150dp" />
->>>>>>> Stashed changes
 </shape>
