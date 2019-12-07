@@ -23,7 +23,7 @@ public class HomeActivity extends AppCompatActivity {
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent list = new Intent(getApplicationContext(),ChatActivity.class);
+                Intent list = new Intent(getApplicationContext(),UserActivity.class);
                 startActivity(list);
             }
         });
