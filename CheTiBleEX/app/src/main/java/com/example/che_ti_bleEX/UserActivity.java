@@ -61,5 +61,7 @@ public class UserActivity extends AppCompatActivity {
         adapter = new UserAdapter(arrayList,this);
         recyclerView.setAdapter(adapter);
 
+
+
     }
 }
