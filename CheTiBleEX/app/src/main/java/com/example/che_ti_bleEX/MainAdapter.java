@@ -16,38 +16,19 @@ import java.util.ArrayList;
 public class MainAdapter extends RecyclerView.Adapter<MainAdapter.CustomViewHolder> {
 
     private ArrayList<MainData> arrayList;
-    String stEmail;
 
-    public MainAdapter(ArrayList<MainData> arrayList,String email) {
+    public MainAdapter(ArrayList<MainData> arrayList) {
         this.arrayList = arrayList;
-        this.stEmail = email;
-    }
-
-    public int getItemViewType(int position){
-        if(arrayList.get(position).getTv_name().equals(stEmail)){
-            return 1;
-        }else{
-            return 2;
-        }
     }
 
     @NonNull
     @Override
     public MainAdapter.CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v;
-        if(viewType == 1){
-            v = LayoutInflater.from(parent.getContext()).inflate(R.layout.right_text_view,parent,false);
-            CustomViewHolder holder = new CustomViewHolder(v);
-            return holder;
-        }else{
-            v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view,parent,false);
-            CustomViewHolder holder = new CustomViewHolder(v);
-            return holder;
-        }
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
+        CustomViewHolder holder = new CustomViewHolder(view);
 
-
-
+        return holder;
     }
 
     @Override
