@@ -30,7 +30,8 @@
                     android:gravity="center"
                     android:text="월"
                     android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -39,7 +40,8 @@
                     android:gravity="center"
                     android:text="화"
                     android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -48,7 +50,8 @@
                     android:gravity="center"
                     android:text="수"
                     android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,7 +60,8 @@
                     android:gravity="center"
                     android:text="목"
                     android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -66,7 +70,8 @@
                     android:gravity="center"
                     android:text="금"
                     android:textColor="#000000"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
 
             </TableRow>
 
@@ -344,6 +349,7 @@
                     android:layout_weight="1"
                     android:textColor="#000000"
                     android:textStyle="bold"
+                    android:textSize="20sp"
                     android:gravity="center"/>
             </TableRow>
             <TableRow
