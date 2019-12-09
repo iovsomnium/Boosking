@@ -70,6 +70,7 @@ public class UserActivity extends AppCompatActivity implements UserAdapter.OnUse
     public void onUserClick(int position) {
         Log.d("click","click" + position);
 
+        String stUserId = arrayList.get(position).getName();
         Intent intent = new Intent(this,ChatActivity.class);
         startActivity(intent);
     }
