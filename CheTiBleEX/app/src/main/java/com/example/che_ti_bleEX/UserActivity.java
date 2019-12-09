@@ -6,8 +6,10 @@ import androidx.constraintlayout.solver.widgets.Snapshot;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class UserActivity extends AppCompatActivity {
+public class UserActivity extends AppCompatActivity implements UserAdapter.OnUserListerner {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -58,10 +60,17 @@ public class UserActivity extends AppCompatActivity {
             }
         });
 
-        adapter = new UserAdapter(arrayList,this);
+        adapter = new UserAdapter(arrayList,this,this);
         recyclerView.setAdapter(adapter);
 
 
+    }
 
+    @Override
+    public void onUserClick(int position) {
+        Log.d("click","click" + position);
+
+        Intent intent = new Intent(this,ChatActivity.class);
+        startActivity(intent);
     }
 }
