@@ -19,25 +19,18 @@
         <activity android:name=".ChatActivity">
 
         </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <!--위에서 부터 순서대로 시작하는 activity설정, 앱 시작할 때 무조건 세로로 고정해서 시작, splash acitivity에 사용되는 화면 불러오는 것 등이다.-->
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashActivity"
-            >
+            android:theme="@style/SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+
         </activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
