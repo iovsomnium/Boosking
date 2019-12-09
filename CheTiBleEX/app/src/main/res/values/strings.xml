@@ -3,4 +3,5 @@
     <string name="create">Create!\nYour Account</string>
     <string name="Hello">Hello!</string>
     <string name="userName">- %1$s -</string>
+    <string name="otherUserName">$s</string>
 </resources>
