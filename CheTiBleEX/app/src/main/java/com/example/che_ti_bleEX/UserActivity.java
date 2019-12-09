@@ -24,7 +24,7 @@ public class UserActivity extends AppCompatActivity implements UserAdapter.OnUse
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
-    private ArrayList<User> arrayList;
+    private ArrayList<Teacher> arrayList;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
 
@@ -41,15 +41,15 @@ public class UserActivity extends AppCompatActivity implements UserAdapter.OnUse
 
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        databaseReference = firebaseDatabase.getReference("User");
+        databaseReference = firebaseDatabase.getReference("Teacher");
         databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // 파이어베이스 데이터베이스의 데이터를 받아오는 곳
                 arrayList.clear(); //기존 배열리스트가 존재하지 않게 초기화
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-                    User user = snapshot.getValue(User.class);
-                    arrayList.add(user); // 담은 데이터들을 배열리스트에 넣고 리사이클러뷰로 보낼 준비
+                    Teacher teacher = snapshot.getValue(Teacher.class);
+                    arrayList.add(teacher); // 담은 데이터들을 배열리스트에 넣고 리사이클러뷰로 보낼 준비
                 }
                 adapter.notifyDataSetChanged();
             }

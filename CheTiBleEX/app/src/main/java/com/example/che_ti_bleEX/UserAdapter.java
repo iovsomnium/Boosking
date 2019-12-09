@@ -14,11 +14,11 @@ import java.util.ArrayList;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder> {
 
-    private ArrayList<User> arrayList;
+    private ArrayList<Teacher> arrayList;
     private Context context;
     private  OnUserListerner mOnUserListener;
 
-    public UserAdapter(ArrayList<User> arrayList, Context context, OnUserListerner onUserListerner){
+    public UserAdapter(ArrayList<Teacher> arrayList, Context context, OnUserListerner onUserListerner){
         this.arrayList = arrayList;
         this.context = context;
         this.mOnUserListener = onUserListerner;

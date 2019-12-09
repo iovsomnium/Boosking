@@ -1,6 +1,6 @@
 package com.example.che_ti_bleEX;
 
-public class User {
+public class Teacher {
     private String name;
     private String subject;
 
@@ -20,7 +20,7 @@ public class User {
         this.subject = subject;
     }
 
-    public  User(){
+    public Teacher(){
 
     }
 }
