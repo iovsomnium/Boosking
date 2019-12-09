@@ -102,7 +102,7 @@ public class ChatActivity extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mChat = new ArrayList<>();
-        mAdapter = new ChatAdapter(mChat);
+        mAdapter = new ChatAdapter(mChat,email);
         mRecyclerView.setAdapter(mAdapter);
 
         DatabaseReference myRef2 = database.getReference("chats");

@@ -10,14 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_chetible_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".UserActivity">
+
+        </activity>
         <activity android:name=".Showtimetable" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".ChatActivity">
 
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,8 +37,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-<activity android:name=".MainActivity"
-    android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

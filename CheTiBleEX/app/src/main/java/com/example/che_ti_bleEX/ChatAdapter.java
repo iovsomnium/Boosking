@@ -13,6 +13,7 @@ import java.util.List;
 public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
     private String[] mDataset;
     List<Chat> mChat;
+    String stEmail;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView mTextView;
@@ -22,15 +23,31 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         }
     }
 
-    public ChatAdapter(List<Chat> mChat){
+    public ChatAdapter(List<Chat> mChat,String email){
         this.mChat = mChat;
+        this.stEmail = email;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if(mChat.get(position).getEmail().equals(stEmail)){
+            return 1;
+        }else{
+            return 2;
+        }
     }
 
     @NonNull
     @Override
     public ChatAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
 
+        View v;
+        if(viewType == 1){
+             v = LayoutInflater.from(parent.getContext()).inflate(R.layout.right_text_view,parent,false);
+        }else{
+            v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view,parent,false);
+        }
+        //View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view,parent,false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
