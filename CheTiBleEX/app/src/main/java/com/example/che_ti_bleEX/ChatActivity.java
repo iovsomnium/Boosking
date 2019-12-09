@@ -78,8 +78,7 @@ public class ChatActivity extends AppCompatActivity {
                     chat.put("text",stText);
 
                     myRef.setValue(chat);
-
-
+                    chatTxt.setText("");
                 }
 
 
@@ -114,6 +113,7 @@ public class ChatActivity extends AppCompatActivity {
                 // [START_EXCLUDE]
                 // Update RecyclerView
                 mChat.add(chat);
+                mRecyclerView.scrollToPosition(mChat.size()-1);
                 mAdapter.notifyItemInserted(mChat.size() - 1);
                 // [END_EXCLUDE]
             }
