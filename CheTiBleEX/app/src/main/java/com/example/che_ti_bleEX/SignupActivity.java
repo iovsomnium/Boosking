@@ -2,6 +2,7 @@ package com.example.che_ti_bleEX;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,25 +15,51 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Hashtable;
 
 public class SignupActivity extends AppCompatActivity {
 
+    private RecyclerView uRecyclerView;
+    private RecyclerView.Adapter uAdapter;
+    private RecyclerView.LayoutManager uLayoutManager;
+
     private FirebaseAuth mAuth;
     Button btn1;
+    EditText Name,subject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        String name = ((EditText)findViewById(R.id.Name)).getText().toString();
+
         btn1 = (Button)findViewById(R.id.create);
         mAuth = FirebaseAuth.getInstance();
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                register();
+
+                String name = ((EditText)findViewById(R.id.Name)).getText().toString();
+                String subject = ((EditText)findViewById(R.id.subject)).getText().toString();
+
+                if (name.equals("") || name.isEmpty() && subject.equals("") || subject.isEmpty()) {
+                    Toast.makeText(SignupActivity.this,"내용을 입력해주세요", Toast.LENGTH_SHORT).show();
+
+                }else {
+                    FirebaseDatabase database = FirebaseDatabase.getInstance();
+                    DatabaseReference myRef = database.getReference("Teacher").push();
+
+                    Hashtable<String, String> user = new Hashtable<String, String>();
+                    user.put("name",name);
+                    user.put("subject",subject);
+
+                    myRef.setValue(user);
+                    register();
+                }
             }
         });
     }

@@ -35,7 +35,6 @@ public class ChatActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    String[] myDataset = {"Hi","appprograming","gaparkche"};
 
     EditText chatTxt;
     Button btn_add;
