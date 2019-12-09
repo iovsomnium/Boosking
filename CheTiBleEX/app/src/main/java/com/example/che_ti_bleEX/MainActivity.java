@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Toast.makeText(MainActivity.this, "성공", Toast.LENGTH_SHORT).show();
+
                             Intent homeintent = new Intent(MainActivity.this,HomeActivity.class);
                             startActivity(homeintent);
 

@@ -21,12 +21,14 @@
     <!--    해당부분에서 username text 부분이 사라졌는데 문자열로 받아오는 걸로 바꿔 뒀으니까
 https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천-->
 
+
+
     <TextView
         android:id="@+id/username"
         android:layout_width="600dp"
         android:layout_height="0dp"
         android:gravity="center_horizontal"
-        android:text="@string/userName"
+        android:text="user"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -69,6 +71,17 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/watchTimeTable"
         app:layout_constraintVertical_bias="0.661" />
+
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/Hello"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,6 +22,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         this.arrayList = arrayList;
         this.context = context;
         this.mOnUserListener = onUserListerner;
+
     }
 
     @NonNull
