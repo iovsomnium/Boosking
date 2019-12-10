@@ -29,6 +29,9 @@ public class SignupActivity extends AppCompatActivity {
     private RecyclerView.Adapter uAdapter;
     private RecyclerView.LayoutManager uLayoutManager;
 
+    private FirebaseAuth firebaseAuth;
+    FirebaseUser user;
+
     private FirebaseAuth mAuth;
     Button btn1;
     EditText Name,subject;
@@ -43,7 +46,6 @@ public class SignupActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String name = ((EditText)findViewById(R.id.Name)).getText().toString();
                 String subject = ((EditText)findViewById(R.id.subject)).getText().toString();
 
@@ -76,14 +78,20 @@ public class SignupActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             String name = ((EditText)findViewById(R.id.Name)).getText().toString();
                             String subject = ((EditText)findViewById(R.id.subject)).getText().toString();
+                            String email = ((EditText)findViewById(R.id.email)).getText().toString();
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseDatabase database = FirebaseDatabase.getInstance();
-                            DatabaseReference myRef = database.getReference("Teacher").push();
+                            firebaseAuth = FirebaseAuth.getInstance();
+                            user = firebaseAuth.getCurrentUser();
+
+                            DatabaseReference myRef = database.getReference("Teacher");
 
                             Hashtable<String, String> tc_user = new Hashtable<String, String>();
+                            tc_user.put("email",email);
                             tc_user.put("name",name);
                             tc_user.put("subject",subject);
-                            myRef.setValue(tc_user);
+                            tc_user.put("key",user.getUid());
+                            myRef.child(user.getUid()).setValue(tc_user);
                             Toast.makeText(SignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
                             finish();
                             FirebaseUser user = mAuth.getCurrentUser();

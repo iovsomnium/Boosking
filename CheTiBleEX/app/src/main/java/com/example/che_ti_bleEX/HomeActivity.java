@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,6 +24,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
@@ -30,31 +32,40 @@ import java.util.List;
 public class HomeActivity extends AppCompatActivity {
 
     String TAG = getClass().getSimpleName();
-    Button chat,watchTimeTable,logout;
+    Button chat,watchTimeTable,logout,setting;
 
-    private FirebaseAuth mAuth;
+    private DatabaseReference mPostReference;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
 
-    //프로필 uri이용해 bitmap으로
+    private FirebaseAuth firebaseAuth;
+    FirebaseUser user;
+    FirebaseDatabase firebaseDatabase;
 
-    Bitmap bitmap;
+    TextView teachername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
-        Toast.makeText(this, "" + currentFirebaseUser.getUid(), Toast.LENGTH_SHORT).show();
 
-        FirebaseDatabase database= FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("Teacher");
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        mPostReference = firebaseDatabase.getReference("Teacher");
 
-        myRef.addListenerForSingleValueEvent(new ValueEventListener() {
+        teachername = (TextView)findViewById(R.id.username);
+
+        Query query = mPostReference.orderByChild("email").equalTo(user.getEmail());
+        query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue().toString();
-                Log.d(TAG,"Value is "+ value);
+                for(DataSnapshot ds: dataSnapshot.getChildren()){
+                    String name = ""+ ds.child("name").getValue();
+
+                    teachername.setText(name);
+                }
             }
 
             @Override
@@ -63,11 +74,18 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        TextView teachername = (TextView)findViewById(R.id.username);
-        teachername.setText(currentFirebaseUser.getEmail());
 
         chat = (Button)findViewById(R.id.changeTimeTable);
         watchTimeTable = (Button)findViewById(R.id.watchTimeTable);
+        setting = (Button)findViewById(R.id.setting);
+
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent set = new Intent(getApplicationContext(),SettingActivity.class);
+                startActivity(set);
+            }
+        });
 
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,17 +100,6 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent timetable = new Intent(getApplicationContext(),Showtimetable.class);
                 startActivity(timetable);
-            }
-        });
-
-        logout = (Button)findViewById(R.id.btnLogout);
-
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                FirebaseAuth.getInstance().signOut();
-                finish();
             }
         });
 

@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -37,7 +39,7 @@ public class ChatActivity extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
 
     EditText chatTxt;
-    Button btn_add;
+    ImageButton btn_add;
     String email;
     List<Chat> mChat;
     FirebaseDatabase database;
@@ -52,8 +54,11 @@ public class ChatActivity extends AppCompatActivity {
             email = user.getEmail();
         }
 
+        Intent in = getIntent();
+        final String stChatid = in.getStringExtra("UserUid");
+
         chatTxt = (EditText)findViewById(R.id.chat_txt);
-        btn_add = (Button)findViewById(R.id.btn_add);
+        btn_add = (ImageButton)findViewById(R.id.btn_add);
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +75,7 @@ public class ChatActivity extends AppCompatActivity {
                     String formattedDate = df.format(c.getTime());
 
 
-                    DatabaseReference myRef = database.getReference("chats").child(formattedDate);
+                    DatabaseReference myRef = database.getReference().child(stChatid).child("chat").child(formattedDate);
 
                     Hashtable<String, String> chat = new Hashtable<String, String>();
                     chat.put("email",email);
@@ -85,7 +90,7 @@ public class ChatActivity extends AppCompatActivity {
         });
 
 
-        Button btnFinish = (Button)findViewById(R.id.btnFinish);
+        ImageButton btnFinish = (ImageButton)findViewById(R.id.btnFinish);
         btnFinish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,7 +108,7 @@ public class ChatActivity extends AppCompatActivity {
         mAdapter = new ChatAdapter(mChat,email);
         mRecyclerView.setAdapter(mAdapter);
 
-        DatabaseReference myRef2 = database.getReference("chats");
+        DatabaseReference myRef2 = database.getReference().child(stChatid).child("chat");
         myRef2.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
