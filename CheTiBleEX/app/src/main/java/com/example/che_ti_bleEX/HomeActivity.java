@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,7 +33,7 @@ import java.util.List;
 public class HomeActivity extends AppCompatActivity {
 
     String TAG = getClass().getSimpleName();
-    Button chat,watchTimeTable,logout,setting;
+    ImageButton chat,watchTimeTable,setting;
 
     private DatabaseReference mPostReference;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -75,9 +76,9 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
-        chat = (Button)findViewById(R.id.changeTimeTable);
-        watchTimeTable = (Button)findViewById(R.id.watchTimeTable);
-        setting = (Button)findViewById(R.id.setting);
+        chat = (ImageButton)findViewById(R.id.changeTimeTable);
+        watchTimeTable = (ImageButton)findViewById(R.id.watchTimeTable);
+        setting = (ImageButton)findViewById(R.id.setting);
 
         setting.setOnClickListener(new View.OnClickListener() {
             @Override
