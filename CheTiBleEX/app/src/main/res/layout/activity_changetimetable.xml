@@ -29,7 +29,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1" />
 
-     <EditText
+    <EditText
         android:id="@+id/email"
         android:layout_width="400dp"
         android:layout_height="0dp"
@@ -51,16 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
-    <EditText
-        android:id="@+id/subject"
-        android:layout_width="400dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="144dp"
-        android:hint="subject"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+
 
     <Button
         android:id="@+id/create"

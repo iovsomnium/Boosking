@@ -4,77 +4,797 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/Hello"
-        android:layout_width="300dp"
+
+    <LinearLayout
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/upsideBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Che.Ti.Ble"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+<!--        <ImageButton-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:src="@drawable/rightarrow"-->
+<!--            android:backgroundTint="#fff"-->
+<!--            android:rotation="180"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:layout_marginLeft="15dp"/>-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/upsideBar"
+        app:layout_constraintBottom_toTopOf="@+id/menu"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="84dp"
-        android:gravity="center_horizontal"
-        android:text="@string/Hello"
-        android:textColor="#000000"
-        android:textSize="80sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:id="@+id/time">
 
-    <!--    해당부분에서 username text 부분이 사라졌는데 문자열로 받아오는 걸로 바꿔 뒀으니까
-https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천-->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:background="@drawable/cellshape">
 
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="600dp"
-        android:layout_height="0dp"
-        android:gravity="center_horizontal"
-        android:text="user"
-        android:textSize="60sp"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Hello" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:background="@drawable/cellshape"/>
 
-    <ImageButton
-        android:id="@+id/watchTimeTable"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/buttonshape"
-        android:src="@drawable/timetable"
-        android:scaleType="fitXY"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.162"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="월"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:background="@drawable/cellshape"/>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="화"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:background="@drawable/cellshape"/>
 
-    <ImageButton
-        android:id="@+id/changeTimeTable"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:layout_marginTop="232dp"
-        android:background="@drawable/buttonshape"
-        android:src="@drawable/chatting"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.882"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/username" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="수"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:background="@drawable/cellshape"/>
 
-    <ImageButton
-        android:id="@+id/setting"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/buttonshape"
-        android:src="@drawable/settings"
-        android:scaleType="fitCenter"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="목"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:background="@drawable/cellshape"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="금"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:background="@drawable/cellshape"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="1교시"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:background="@drawable/cellshape"/>
+
+                <TextView
+                    android:id="@+id/monday1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@drawable/cellshape"
+                    android:gravity="center"
+                    android:text="월"
+                    android:textSize="20sp"
+                    android:textColor="#000000"/>
+                <TextView
+                    android:text="화"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/tuesday1"/>
+                <TextView
+                    android:text="수"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/wendsday1"/>
+                <TextView
+                    android:text="목"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/thuresday1"/>
+                <TextView
+                    android:text="금"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/friday1"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="2교시"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:background="@drawable/cellshape"/>
+                <TextView
+                    android:text="월"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/monday2"/>
+                <TextView
+                    android:text="화"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/tuesday2"/>
+                <TextView
+                    android:text="수"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/wendsday2"/>
+                <TextView
+                    android:text="목"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/thuresday2"/>
+                <TextView
+                    android:text="금"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/friday2"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="3교시"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"/>
+                <TextView
+                    android:text="월"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/monday3"/>
+                <TextView
+                    android:text="화"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/tuesday3"/>
+                <TextView
+                    android:text="수"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/wendsday3"/>
+                <TextView
+                    android:text="목"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/thuresday3"/>
+                <TextView
+                    android:text="금"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/friday3"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="4교시"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:background="@drawable/cellshape"/>
+                <TextView
+                    android:text="월"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/monday4"/>
+                <TextView
+                    android:text="화"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/tuesday4"/>
+                <TextView
+                    android:text="수"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/wendsday4"/>
+                <TextView
+                    android:text="목"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/thuresday4"/>
+                <TextView
+                    android:text="금"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/friday4"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="0.3">
+                <TextView
+                    android:text="점심 시간"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="5교시"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:background="@drawable/cellshape"/>
+                <TextView
+                    android:text="월"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/monday5"/>
+                <TextView
+                    android:text="화"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/tuesday5"/>
+                <TextView
+                    android:text="수"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/wendsday5"/>
+                <TextView
+                    android:text="목"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/thuresday5"/>
+                <TextView
+                    android:text="금"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/friday5"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="6교시"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:background="@drawable/cellshape"/>
+                <TextView
+                    android:text="월"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/monday6"/>
+                <TextView
+                    android:text="화"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/tuesday6"/>
+                <TextView
+                    android:text="수"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/wendsday6"/>
+                <TextView
+                    android:text="목"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/thuresday6"/>
+                <TextView
+                    android:text="금"
+                    android:layout_width="wrap_content"
+                    android:textSize="20sp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/friday6"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cellshape"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="7교시"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:background="@drawable/cellshape"/>
+                <TextView
+                    android:text="월"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/monday7"/>
+                <TextView
+                    android:text="화"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/tuesday7"/>
+                <TextView
+                    android:text="수"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/wendsday7"/>
+                <TextView
+                    android:text="목"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/thuresday7"/>
+                <TextView
+                    android:text="금"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:textColor="#000000"
+
+                    android:background="@drawable/cellshape"
+                    android:id="@+id/friday7"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/watchTimeTable"
-        app:layout_constraintVertical_bias="0.661" />
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/menu">
 
+        <LinearLayout
+            android:id="@+id/timetable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#fff">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/timetable"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간표"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#fff">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/chatting"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="채팅"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/set"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#fff">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/settings"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정"
+                android:textSize="25dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/Hello"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="300dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="84dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="@string/Hello"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textColor="#000000"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="80sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    &lt;!&ndash;    해당부분에서 username text 부분이 사라졌는데 문자열로 받아오는 걸로 바꿔 뒀으니까&ndash;&gt;-->
+<!--&lt;!&ndash;https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천&ndash;&gt;&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/username"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="600dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="0dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:gravity="center_horizontal"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:text="user"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textSize="60sp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:textColor="#000000"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/Hello" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/watchTimeTable"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="250dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="250dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="44dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:background="@drawable/buttonshape"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:src="@drawable/timetable"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:scaleType="fitXY"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintHorizontal_bias="0.162"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/username" />&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;    <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/changeTimeTable"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="230dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="230dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_marginTop="232dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:background="@drawable/buttonshape"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:src="@drawable/chatting"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:scaleType="fitCenter"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintHorizontal_bias="0.882"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/username" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/setting"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="200dp"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:background="@drawable/buttonshape"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:src="@drawable/settings"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:scaleType="fitCenter"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintHorizontal_bias="0.307"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintTop_toBottomOf="@+id/watchTimeTable"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:layout_constraintVertical_bias="0.661" />&ndash;&gt;-->
+
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
