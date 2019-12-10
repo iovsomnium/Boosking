@@ -28,54 +28,11 @@ import java.util.zip.Inflater;
 
 public class SettingActivity extends AppCompatActivity {
 
-    private DatabaseReference mPostReference;
-    private FirebaseAuth.AuthStateListener mAuthListener;
-
-    private FirebaseAuth firebaseAuth;
-    FirebaseUser user;
-    FirebaseDatabase firebaseDatabase;
-    EditText editname;
-    Button save_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
-
-        editname = (EditText)findViewById(R.id.edit_name);
-        save_btn = (Button) findViewById(R.id.save_btn);
-
-        firebaseAuth = FirebaseAuth.getInstance();
-        user = firebaseAuth.getCurrentUser();
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        mPostReference = firebaseDatabase.getReference("Teacher");
-
-        Query query = mPostReference.orderByChild("email").equalTo(user.getEmail());
-        query.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot ds: dataSnapshot.getChildren()){
-                    String name = ""+ ds.child("name").getValue();
-
-                    editname.setText(name);
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        final String name = editname.getText().toString();
-
-        save_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
 
     }
 }
