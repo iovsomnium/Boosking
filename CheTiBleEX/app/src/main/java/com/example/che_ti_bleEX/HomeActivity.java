@@ -27,8 +27,6 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -196,21 +194,6 @@ public class HomeActivity extends AppCompatActivity {
 //                    }
 //                });
 
-        db.collection("Timetable")
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                            }
-                        } else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
-                        }
-                    }
-                });
-
         CollectionReference user = db.collection("Timetable");
 
         for(int i=1;i<35;i++){
@@ -304,62 +287,6 @@ public class HomeActivity extends AppCompatActivity {
                 }
             });
         }
-
-//        Intent intent = new Intent(getApplicationContext(),Showtimetable.class);
-//        startActivity(intent);
-
-//        firebaseAuth = FirebaseAuth.getInstance();
-//        user = firebaseAuth.getCurrentUser();
-//        firebaseDatabase = FirebaseDatabase.getInstance();
-//        mPostReference = firebaseDatabase.getReference("Teacher");
-//
-//        teachername = (TextView)findViewById(R.id.username);
-//
-//        Query query = mPostReference.orderByChild("email").equalTo(user.getEmail());
-//        query.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for(DataSnapshot ds: dataSnapshot.getChildren()){
-//                    String name = ""+ ds.child("name").getValue();
-//
-//                    teachername.setText(name);
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
-
-
-//        chat = (ImageButton)findViewById(R.id.changeTimeTable);
-//        watchTimeTable = (ImageButton)findViewById(R.id.watchTimeTable);
-//        setting = (ImageButton)findViewById(R.id.setting);
-
-//        setting.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent set = new Intent(getApplicationContext(),SettingActivity.class);
-//                startActivity(set);
-//            }
-//        });
-//
-//        chat.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent list = new Intent(getApplicationContext(),UserActivity.class);
-//                startActivity(list);
-//            }
-//        });
-//
-//        watchTimeTable.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent timetable = new Intent(getApplicationContext(),Showtimetable.class);
-//                startActivity(timetable);
-//            }
-//        });
 
     }
     private boolean backKeyPressedTwice = false;

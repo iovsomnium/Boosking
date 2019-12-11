@@ -2,14 +2,24 @@ package com.example.che_ti_bleEX;
 
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -19,30 +29,35 @@ import java.util.Map;
 
 public class ChangeTimetableActivity extends AppCompatActivity {
 
-    InputMethodManager imm;
     Spinner date,period;
     String changedate;
     String changetime;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    EditText changesubject;
+    Button change;
+
+    private DatabaseReference mPostReference;
+    private FirebaseAuth firebaseAuth;
+    FirebaseUser user;
+    FirebaseDatabase firebaseDatabase;
+    String name;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        CollectionReference timetable = db.collection("Timetable");
-
-        Map<String, Object> data1 = new HashMap<>();
-        data1.put("name", "직B");
-        data1.put("teacher1", "바뀜정문정");
-        data1.put("teacher2", "");
         setContentView(R.layout.activity_change_timetable);
 
-        data1.put("date", "monday1");
-        timetable.document("data1").set(data1);
-
-        imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        firebaseAuth = FirebaseAuth.getInstance();
+        user = firebaseAuth.getCurrentUser();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        mPostReference = firebaseDatabase.getReference("Teacher");
 
         date = (Spinner)findViewById(R.id.date);
         period = (Spinner)findViewById(R.id.period);
+        changesubject = (EditText) findViewById(R.id.changesubject);
+        change = (Button)findViewById(R.id.change);
+
 
         final ArrayList datearray = new ArrayList<>();
         datearray.add("월요일");
@@ -69,7 +84,6 @@ public class ChangeTimetableActivity extends AppCompatActivity {
         date.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                imm.hideSoftInputFromWindow(date.getWindowToken(), 0);
                 String q = datearray.get(i).toString();
                 switch(q) {
                     case "월요일":
@@ -109,7 +123,6 @@ public class ChangeTimetableActivity extends AppCompatActivity {
         period.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                imm.hideSoftInputFromWindow(period.getWindowToken(), 0);
                 String r = periodarray.get(i).toString();
                 switch(r) {
                     case "1교시":
@@ -160,6 +173,38 @@ public class ChangeTimetableActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+
+        //db 연결
+        CollectionReference timetable = db.collection("Teacher-sub");
+
+        //db 값 넣기
+        Map<String, Object> 문A = new HashMap<>();
+        문A.put("name", "문A");
+        문A.put("teacher1", "김우리");
+        문A.put("teacher2", "");
+        timetable.document("문A").set(문A);
+
+        change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Query query = mPostReference.orderByChild("subject").equalTo(changesubject.getText().toString());
+                query.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for(DataSnapshot ds: dataSnapshot.getChildren()){
+                            name = ""+ ds.child("name").getValue();
+                            Toast.makeText(getApplicationContext(),name+"",
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
 
