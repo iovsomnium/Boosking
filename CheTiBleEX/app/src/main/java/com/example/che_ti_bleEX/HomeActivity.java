@@ -75,8 +75,8 @@ public class HomeActivity extends AppCompatActivity {
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent timetable = new Intent(getApplicationContext(),ChatActivity.class);
-                startActivity(timetable);
+                Intent chat = new Intent(getApplicationContext(),UserActivity.class);
+                startActivity(chat);
             }
         });
 
