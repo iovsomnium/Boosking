@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/upsideBar"
         android:layout_width="match_parent"
@@ -19,25 +19,35 @@
         android:elevation="5dp">
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/fonthanna"
             android:text="Che.Ti.Ble"
             android:textColor="@color/colorBlack"
             android:textSize="36dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:gravity=""
-                android:text="user"
-                android:textSize="25sp"
-                android:textColor="#000000" />
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity=""
+            android:text="user"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.646"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         app:layout_constraintTop_toBottomOf="@+id/upsideBar"

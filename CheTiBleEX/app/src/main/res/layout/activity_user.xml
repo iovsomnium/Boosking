@@ -17,8 +17,86 @@
         android:scrollbars="vertical"
         android:layout_weight="1">
 
+
     </androidx.recyclerview.widget.RecyclerView>
 
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:id="@+id/menu">
+
+        <LinearLayout
+            android:id="@+id/timetable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#fff">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/timetable"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간표"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp"
+                android:fontFamily="@font/fonthanna"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#fff">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/chatting"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="채팅"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp"
+                android:fontFamily="@font/fonthanna"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/set"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#fff">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/setting"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정"
+                android:textColor="@color/colorBlack"
+                android:textSize="25dp"
+                android:fontFamily="@font/fonthanna"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 
