@@ -67,6 +67,7 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
             android:id="@+id/chat_txt"
             android:layout_width="540dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:hint="내용을 입력하세요" />
 
         <ImageButton
@@ -74,7 +75,7 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/send"
-            android:background="@drawable/buttonshape"
+            android:background="@color/colorWhite"
             android:scaleType="centerInside"
             />
 
