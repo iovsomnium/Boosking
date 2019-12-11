@@ -15,7 +15,6 @@
         <activity android:name=".ChangeTimetableActivity"></activity>
         <activity android:name=".SettingActivity" />
         <activity android:name=".UserActivity" />
-        <activity android:name=".Showtimetable" />
         <activity android:name=".HomeActivity">
 
         </activity>

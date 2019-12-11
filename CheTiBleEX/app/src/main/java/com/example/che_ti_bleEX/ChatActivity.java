@@ -51,8 +51,6 @@ public class ChatActivity extends AppCompatActivity {
 
         Intent in = getIntent();
         final String stChatid = in.getStringExtra("UserUid");
-//        Toast.makeText(getApplicationContext(),stChatid+"",
-//                Toast.LENGTH_SHORT).show();
 
         chatTxt = (EditText)findViewById(R.id.chat_txt);
         btn_add = (ImageButton)findViewById(R.id.btn_add);

@@ -109,28 +109,18 @@ public class ChangeTimetableActivity extends AppCompatActivity {
                 switch(q) {
                     case "월요일":
                         changedate = "monday";
-                        Toast.makeText(getApplicationContext(),changedate+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "화요일":
                         changedate = "tuesday";
-                        Toast.makeText(getApplicationContext(),changedate+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "수요일":
                         changedate = "wendsday";
-                        Toast.makeText(getApplicationContext(),changedate+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "목요일":
                         changedate = "thuresday";
-                        Toast.makeText(getApplicationContext(),changedate+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "금요일":
                         changedate = "friday";
-                        Toast.makeText(getApplicationContext(),changedate+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
@@ -150,44 +140,30 @@ public class ChangeTimetableActivity extends AppCompatActivity {
                         classtime = changedate;
                         changetime = "1";
                         classtime = changedate+changetime;
-                        Toast.makeText(getApplicationContext(),classtime+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "2교시":
                         classtime =changedate;
                         changetime = "2";
-                        Toast.makeText(getApplicationContext(),changedate+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "3교시":
                         classtime =changedate;
                         changetime = "3";
-                        Toast.makeText(getApplicationContext(),changetime+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "4교시":
                         classtime =changedate;
                         changetime = "4";
-                        Toast.makeText(getApplicationContext(),classtime+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "5교시":
                         classtime =changedate;
                         changetime = "5";
-                        Toast.makeText(getApplicationContext(),classtime+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "6교시":
                         classtime =changedate;
                         changetime = "6";
-                        Toast.makeText(getApplicationContext(),classtime+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                     case "7교시":
                         classtime =changedate;
                         changetime = "7";
-                        Toast.makeText(getApplicationContext(),classtime+"",
-                                Toast.LENGTH_SHORT).show();
                         break;
                 }
             }
@@ -227,27 +203,6 @@ public class ChangeTimetableActivity extends AppCompatActivity {
 
             }
         });
-
-//        DocumentReference docRef = db.collection("Teacher-sub").document(s);
-//        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-//                if (task.isSuccessful()) {
-//                    DocumentSnapshot document = task.getResult();
-//                    if (document.exists()) {
-//                        tc1 = document.getData().get("teacher1").toString();
-//                        tc2 = document.getData().get("teacher2").toString();
-//                        Log.d(TAG, "DocumentSnapshot data: " + tc1+tc2);
-//                    } else {
-//                        Log.d(TAG, "No such document");
-//                    }
-//                } else {
-//                    Log.d(TAG, "get failed with ", task.getException());
-//                }
-//            }
-//        });
-
-
 
 
         change.setOnClickListener(new View.OnClickListener() {
@@ -309,69 +264,5 @@ public class ChangeTimetableActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-//
-//        //db 연결
-//        CollectionReference timetable = db.collection("Teacher-sub");
-//
-//        //db 값 넣기
-//        Map<String, Object> 문A = new HashMap<>();
-//        문A.put("name", "문A");
-//        문A.put("teacher1", "김우리");
-//        문A.put("teacher2", "");
-//        timetable.document("문A").set(문A);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//        change.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Query query = mPostReference.orderByChild("subject").equalTo(s);
-//                query.addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                        for(DataSnapshot ds: dataSnapshot.getChildren()){
-//                            name = ""+ ds.child("name").getValue();
-//                            Toast.makeText(getApplicationContext(),name+"",
-//                                    Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//                    }
-//                });
-//            }
-//        });
-
-
     }
 }

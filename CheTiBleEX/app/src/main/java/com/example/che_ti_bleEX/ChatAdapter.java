@@ -47,7 +47,6 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         }else{
             v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view,parent,false);
         }
-        //View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_text_view,parent,false);
         ViewHolder vh = new ViewHolder(v);
         return vh;
     }
