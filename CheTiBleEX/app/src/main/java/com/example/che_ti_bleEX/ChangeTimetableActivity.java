@@ -94,6 +94,44 @@ public class ChangeTimetableActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 imm.hideSoftInputFromWindow(period.getWindowToken(), 0);
+                String r = periodarray.get(i).toString();
+                switch(r) {
+                    case "1교시":
+                        changedate += "1";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "2교시":
+                        changedate += "2";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "3교시":
+                        changedate += "3";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "4교시":
+                        changedate += "4";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "5교시":
+                        changedate += "5";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "6교시":
+                        changedate += "6";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "7교시":
+                        changedate += "7";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                }
             }
 
             @Override
