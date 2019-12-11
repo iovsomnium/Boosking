@@ -194,10 +194,10 @@ public class HomeActivity extends AppCompatActivity {
 //                    }
 //                });
 
-        CollectionReference user = db.collection("Timetable");
+        CollectionReference user = db.collection("ChangeTimetable");
 
         for(int i=1;i<35;i++){
-            DocumentReference docRef = db.collection("Timetable").document("data"+i+"");
+            DocumentReference docRef = db.collection("ChangeTimetable").document("data"+i+"");
             final int I = i;
             docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                 @Override
@@ -205,8 +205,8 @@ public class HomeActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         DocumentSnapshot document = task.getResult();
                         if (document.exists()) {
-                            String data = document.getData().get("name").toString()+"\n"+document.getData().get("teacher1").toString()+" "+document.getData().get("teacher2").toString();
-                            Log.d(TAG, "DocumentSnapshot data: " + document.getData());
+                            String data = document.getData().get("name")+"\n"+document.getData().get("teacher1")+" "+document.getData().get("teacher2");
+                            Log.d(TAG, "DocumentSnapshot data: " + document.getData().get("name")+"\n"+document.getData().get("teacher1")+" "+document.getData().get("teacher2"));
 
                             switch(I) {
                                 case 1: monday1.setText(data);

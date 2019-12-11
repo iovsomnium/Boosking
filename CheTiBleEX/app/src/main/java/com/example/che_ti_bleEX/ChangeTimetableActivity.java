@@ -1,6 +1,8 @@
 package com.example.che_ti_bleEX;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,15 +13,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
@@ -28,6 +30,7 @@ import java.util.Map;
 
 public class ChangeTimetableActivity extends AppCompatActivity {
 
+    String TAG = getClass().getSimpleName();
     Spinner date,period,changesubject;
     String changedate;
     String changetime;
@@ -39,7 +42,7 @@ public class ChangeTimetableActivity extends AppCompatActivity {
     FirebaseUser user;
     FirebaseDatabase firebaseDatabase;
     String name;
-    String s;
+    String tc1,tc2,classtime,s;
 
 
     @Override
@@ -56,8 +59,6 @@ public class ChangeTimetableActivity extends AppCompatActivity {
         period = (Spinner)findViewById(R.id.period);
         changesubject = (Spinner) findViewById(R.id.changesubject);
         change = (Button)findViewById(R.id.change);
-
-
 
 
         final ArrayList datearray = new ArrayList<>();
@@ -127,7 +128,7 @@ public class ChangeTimetableActivity extends AppCompatActivity {
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "금요일":
-                        changedate += "friday";
+                        changedate = "friday";
                         Toast.makeText(getApplicationContext(),changedate+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
@@ -146,45 +147,46 @@ public class ChangeTimetableActivity extends AppCompatActivity {
                 String r = periodarray.get(i).toString();
                 switch(r) {
                     case "1교시":
-                        changetime = changedate;
-                        changetime += "1";
-                        Toast.makeText(getApplicationContext(),changetime+"",
+                        classtime = changedate;
+                        changetime = "1";
+                        classtime = changedate+changetime;
+                        Toast.makeText(getApplicationContext(),classtime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "2교시":
-                        changetime =changedate;
-                        changetime += "2";
-                        Toast.makeText(getApplicationContext(),changetime+"",
+                        classtime =changedate;
+                        changetime = "2";
+                        Toast.makeText(getApplicationContext(),changedate+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "3교시":
-                        changetime =changedate;
-                        changetime += "3";
+                        classtime =changedate;
+                        changetime = "3";
                         Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "4교시":
-                        changetime =changedate;
-                        changetime += "4";
-                        Toast.makeText(getApplicationContext(),changetime+"",
+                        classtime =changedate;
+                        changetime = "4";
+                        Toast.makeText(getApplicationContext(),classtime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "5교시":
-                        changetime =changedate;
-                        changetime += "5";
-                        Toast.makeText(getApplicationContext(),changetime+"",
+                        classtime =changedate;
+                        changetime = "5";
+                        Toast.makeText(getApplicationContext(),classtime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "6교시":
-                        changetime =changedate;
-                        changetime += "6";
-                        Toast.makeText(getApplicationContext(),changetime+"",
+                        classtime =changedate;
+                        changetime = "6";
+                        Toast.makeText(getApplicationContext(),classtime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "7교시":
-                        changetime =changedate;
-                        changetime += "7";
-                        Toast.makeText(getApplicationContext(),changetime+"",
+                        classtime =changedate;
+                        changetime = "7";
+                        Toast.makeText(getApplicationContext(),classtime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                 }
@@ -200,6 +202,24 @@ public class ChangeTimetableActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 s = subdarray.get(i).toString();
+                DocumentReference docRef2 = db.collection("Teacher-sub").document(s);
+                docRef2.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DocumentSnapshot document = task.getResult();
+                            if (document.exists()) {
+                                tc1 = document.getData().get("teacher1").toString();
+                                tc2 = document.getData().get("teacher2").toString();
+                                Log.d(TAG, "DocumentSnapshot data: " + tc1+tc2);
+                            } else {
+                                Log.d(TAG, "No such document");
+                            }
+                        } else {
+                            Log.d(TAG, "get failed with ", task.getException());
+                        }
+                    }
+                });
             }
 
             @Override
@@ -208,37 +228,149 @@ public class ChangeTimetableActivity extends AppCompatActivity {
             }
         });
 
-        //db 연결
-        CollectionReference timetable = db.collection("Teacher-sub");
+//        DocumentReference docRef = db.collection("Teacher-sub").document(s);
+//        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+//            @Override
+//            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+//                if (task.isSuccessful()) {
+//                    DocumentSnapshot document = task.getResult();
+//                    if (document.exists()) {
+//                        tc1 = document.getData().get("teacher1").toString();
+//                        tc2 = document.getData().get("teacher2").toString();
+//                        Log.d(TAG, "DocumentSnapshot data: " + tc1+tc2);
+//                    } else {
+//                        Log.d(TAG, "No such document");
+//                    }
+//                } else {
+//                    Log.d(TAG, "get failed with ", task.getException());
+//                }
+//            }
+//        });
 
-        //db 값 넣기
-        Map<String, Object> 문A = new HashMap<>();
-        문A.put("name", "문A");
-        문A.put("teacher1", "김우리");
-        문A.put("teacher2", "");
-        timetable.document("문A").set(문A);
+
+
 
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Query query = mPostReference.orderByChild("subject").equalTo(s);
-                query.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for(DataSnapshot ds: dataSnapshot.getChildren()){
-                            name = ""+ ds.child("name").getValue();
-                            Toast.makeText(getApplicationContext(),name+"",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-                    }
+                CollectionReference timetable = db.collection("ChangeTimetable");
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                switch (changedate){
+                    case "monday" :
+                        Map<String, Object> data1 = new HashMap<>();
+                        data1.put("date",classtime);
+                        data1.put("name", s);
+                        data1.put("teacher1", tc1);
+                        data1.put("teacher2", tc2);
+                        timetable.document("data"+changetime).set(data1);
+                        break;
+                    case "tuesday" :
+                        int two = 7+Integer.parseInt(changetime);
+                        Map<String, Object> data2 = new HashMap<>();
+                        data2.put("date",classtime);
+                        data2.put("name", s);
+                        data2.put("teacher1", tc1);
+                        data2.put("teacher2", tc2);
+                        timetable.document("data"+two).set(data2);
+                        break;
+                    case "wendsday" :
+                        int three = 14+Integer.parseInt(changetime);
+                        Map<String, Object> data3 = new HashMap<>();
+                        data3.put("date",classtime);
+                        data3.put("name", s);
+                        data3.put("teacher1", tc1);
+                        data3.put("teacher2", tc2);
+                        timetable.document("data"+three).set(data3);
+                        break;
+                    case "thuresday" :
+                        int four = 21+Integer.parseInt(changetime);
+                        Map<String, Object> data4 = new HashMap<>();
+                        data4.put("date",classtime);
+                        data4.put("name", s);
+                        data4.put("teacher1", tc1);
+                        data4.put("teacher2", tc2);
+                        timetable.document("data"+four).set(data4);
+                        break;
+                    case "friday" :
+                        int five = 28+Integer.parseInt(changetime);
+                        Map<String, Object> data5 = new HashMap<>();
+                        data5.put("date",classtime);
+                        data5.put("name", s);
+                        data5.put("teacher1", tc1);
+                        data5.put("teacher2", tc2);
+                        timetable.document("data"+five).set(data5);
+                        break;
+                }
 
-                    }
-                });
+                Toast.makeText(getApplicationContext(),"정상적으로 시간표가 변경되었습니다",
+                        Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
+                startActivity(intent);
             }
         });
+
+
+//
+//        //db 연결
+//        CollectionReference timetable = db.collection("Teacher-sub");
+//
+//        //db 값 넣기
+//        Map<String, Object> 문A = new HashMap<>();
+//        문A.put("name", "문A");
+//        문A.put("teacher1", "김우리");
+//        문A.put("teacher2", "");
+//        timetable.document("문A").set(문A);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        change.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Query query = mPostReference.orderByChild("subject").equalTo(s);
+//                query.addValueEventListener(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                        for(DataSnapshot ds: dataSnapshot.getChildren()){
+//                            name = ""+ ds.child("name").getValue();
+//                            Toast.makeText(getApplicationContext(),name+"",
+//                                    Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                    }
+//                });
+//            }
+//        });
 
 
     }
