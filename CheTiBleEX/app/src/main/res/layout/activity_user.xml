@@ -86,7 +86,7 @@
                 android:text="시간표"
                 android:textColor="@color/colorBlack"
                 android:textSize="25dp"
-                android:fontFamily="@font/fonthanna"/>
+                android:fontFamily="@font/fontjua"/>
 
         </LinearLayout>
 
@@ -109,7 +109,7 @@
                 android:text="채팅"
                 android:textColor="@color/colorBlack"
                 android:textSize="25dp"
-                android:fontFamily="@font/fonthanna"/>
+                android:fontFamily="@font/fontjua"/>
 
         </LinearLayout>
 
@@ -132,7 +132,7 @@
                 android:text="설정"
                 android:textColor="@color/colorBlack"
                 android:textSize="25dp"
-                android:fontFamily="@font/fonthanna"/>
+                android:fontFamily="@font/fontjua"/>
 
         </LinearLayout>
 
