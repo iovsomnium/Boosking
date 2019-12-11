@@ -13,7 +13,7 @@
         android:layout_marginTop="132dp"
         android:fontFamily="@font/fonthanna"
         android:gravity="center_horizontal"
-        android:text="Create \nYour Account!"
+        android:text="Change \n Wrong name!"
         android:textColor="@color/colorBlack"
         android:textSize="55sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/Name"
         android:layout_width="400dp"
         android:layout_height="0dp"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/email"
         android:layout_width="400dp"
         android:layout_height="0dp"
