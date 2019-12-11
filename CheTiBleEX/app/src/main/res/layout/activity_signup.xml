@@ -13,7 +13,8 @@
         android:layout_marginTop="108dp"
         android:gravity="center_horizontal"
         android:text="Create \nYour Account!"
-        android:textColor="#000000"
+        android:textColor="@color/colorBlack"
+        android:fontFamily="@font/fonthanna"
         android:textSize="55dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,17 +26,21 @@
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
         android:hint="Name"
+        android:textColorHint="@color/colorBlack"
+        android:fontFamily="@font/fonthanna"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1" />
 
-     <EditText
+    <EditText
         android:id="@+id/email"
         android:layout_width="400dp"
         android:layout_height="0dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/fonthanna"
         android:hint="Email Adress"
         android:inputType="textEmailAddress"
+        android:textColorHint="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Name" />
@@ -44,9 +49,11 @@
         android:id="@+id/password"
         android:layout_width="400dp"
         android:layout_height="0dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="50dp"
         android:hint="Password"
         android:inputType="text"
+        android:textColorHint="@color/colorBlack"
+        android:fontFamily="@font/fonthanna"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
@@ -55,28 +62,31 @@
         android:id="@+id/subject"
         android:layout_width="400dp"
         android:layout_height="0dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/fonthanna"
         android:hint="subject"
         android:inputType="text"
+        android:textColorHint="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <Button
         android:id="@+id/create"
         android:layout_width="310dp"
         android:layout_height="0dp"
-        android:background="#e6e8eb"
+        android:background="@drawable/boldcellshpae"
+        android:fontFamily="@font/fonthanna"
         android:text="Create"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="#000000"
+        android:textColor="@color/colorBlack"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.442"
-        app:layout_constraintDimensionRatio="5"/>
+        app:layout_constraintTop_toBottomOf="@+id/subject"
+        app:layout_constraintVertical_bias="0.442" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

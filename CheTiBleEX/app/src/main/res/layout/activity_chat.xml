@@ -66,7 +66,7 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
-        android:background="#ffffff">
+        android:background="@color/colorWhite">
 
         <EditText
             android:id="@+id/chat_txt"
@@ -74,6 +74,7 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:hint="내용을 입력하세요"
+            android:textColorHint="@color/colorBlack"
             android:fontFamily="@font/fonthanna"/>
 
         <ImageButton

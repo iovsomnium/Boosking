@@ -685,7 +685,7 @@
         android:layout_height="80dp"
         android:orientation="horizontal"
         android:id="@+id/menu"
-        android:background="@drawable/boldcellshpae">
+        android:background="@drawable/cellshape">
 
         <LinearLayout
             android:id="@+id/timetable"
@@ -693,7 +693,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"
@@ -716,7 +716,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"

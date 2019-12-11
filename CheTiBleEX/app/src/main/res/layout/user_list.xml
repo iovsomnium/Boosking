@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:text="최연진"
-            android:textColor="#000000"
+            android:textColor="@color/colorBlack"
             android:textSize="26sp" />
     </LinearLayout>
 
