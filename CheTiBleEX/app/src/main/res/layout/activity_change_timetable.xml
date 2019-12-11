@@ -44,7 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/changesubject"
         android:layout_width="400dp"
         android:layout_height="0dp"
@@ -55,7 +55,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/period" />
-
 
 
     <Button

@@ -5,7 +5,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -29,11 +28,10 @@ import java.util.Map;
 
 public class ChangeTimetableActivity extends AppCompatActivity {
 
-    Spinner date,period;
+    Spinner date,period,changesubject;
     String changedate;
     String changetime;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    EditText changesubject;
     Button change;
 
     private DatabaseReference mPostReference;
@@ -41,6 +39,7 @@ public class ChangeTimetableActivity extends AppCompatActivity {
     FirebaseUser user;
     FirebaseDatabase firebaseDatabase;
     String name;
+    String s;
 
 
     @Override
@@ -55,8 +54,10 @@ public class ChangeTimetableActivity extends AppCompatActivity {
 
         date = (Spinner)findViewById(R.id.date);
         period = (Spinner)findViewById(R.id.period);
-        changesubject = (EditText) findViewById(R.id.changesubject);
+        changesubject = (Spinner) findViewById(R.id.changesubject);
         change = (Button)findViewById(R.id.change);
+
+
 
 
         final ArrayList datearray = new ArrayList<>();
@@ -75,11 +76,30 @@ public class ChangeTimetableActivity extends AppCompatActivity {
         periodarray.add("6교시");
         periodarray.add("7교시");
 
+        final ArrayList subdarray = new ArrayList<>();
+        subdarray.add("C#");
+        subdarray.add("DB");
+        subdarray.add("문A");
+        subdarray.add("국사");
+        subdarray.add("문B");
+        subdarray.add("직A");
+        subdarray.add("직B");
+        subdarray.add("미술");
+        subdarray.add("앱프");
+        subdarray.add("영어");
+        subdarray.add("자습");
+        subdarray.add("진로");
+        subdarray.add("체육");
+        subdarray.add("확통");
+
+
         ArrayAdapter dateAdapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,datearray);
         ArrayAdapter periodAdapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,periodarray);
+        ArrayAdapter subAdapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_spinner_dropdown_item,subdarray);
 
         date.setAdapter(dateAdapter);
         period.setAdapter(periodAdapter);
+        changesubject.setAdapter(subAdapter);
 
         date.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -176,6 +196,18 @@ public class ChangeTimetableActivity extends AppCompatActivity {
             }
         });
 
+        changesubject.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                s = subdarray.get(i).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
         //db 연결
         CollectionReference timetable = db.collection("Teacher-sub");
 
@@ -189,7 +221,7 @@ public class ChangeTimetableActivity extends AppCompatActivity {
         change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Query query = mPostReference.orderByChild("subject").equalTo(changesubject.getText().toString());
+                Query query = mPostReference.orderByChild("subject").equalTo(s);
                 query.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
