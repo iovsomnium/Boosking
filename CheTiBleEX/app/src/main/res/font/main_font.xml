@@ -4,9 +4,6 @@
     <font
         android:font="@font/fonthanna"
         android:fontStyle="normal"
-        android:fontWeight="400"
-        app:font="@font/fonthanna"
-        app:fontstyle="normal"
-        app:fontWeight="400" />
+        android:fontWeight="400" />
 
 </font-family>

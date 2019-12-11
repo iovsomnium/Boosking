@@ -132,7 +132,6 @@ public class HomeActivity extends AppCompatActivity {
         friday4 = (TextView)findViewById(R.id.friday4);
         friday5 = (TextView)findViewById(R.id.friday5);
         friday6 = (TextView)findViewById(R.id.friday6);
-        friday7 = (TextView)findViewById(R.id.friday7);
 
 
 
@@ -280,8 +279,6 @@ public class HomeActivity extends AppCompatActivity {
                                 case 33: friday5.setText(data);
                                     break;
                                 case 34: friday6.setText(data);
-                                    break;
-                                default: friday7.setText("자습");
                                     break;
                             }
                         } else {

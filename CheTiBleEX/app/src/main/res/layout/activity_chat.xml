@@ -32,13 +32,14 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="20dp"
+            android:layout_height="28dp"
             android:layout_gravity="center"
             android:layout_weight="7"
             android:text="@string/otherUserName"
-            android:textColor="#000000"
+            android:textColor="@color/colorBlack"
             android:textSize="30dp"
+            android:fontFamily="@font/fonthanna"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,14 +50,17 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
         android:id="@+id/chat_rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#dce3de"
         android:scrollbarFadeDuration="0"
         android:scrollbarSize="5dp"
         android:scrollbarThumbVertical="@android:color/darker_gray"
         android:scrollbars="vertical"
-        android:layout_weight="1"
-        android:background="#dce3de">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </androidx.recyclerview.widget.RecyclerView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -68,7 +72,8 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
             android:layout_width="540dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="내용을 입력하세요" />
+            android:hint="내용을 입력하세요"
+            android:fontFamily="@font/fonthanna"/>
 
         <ImageButton
             android:id="@+id/btn_add"
