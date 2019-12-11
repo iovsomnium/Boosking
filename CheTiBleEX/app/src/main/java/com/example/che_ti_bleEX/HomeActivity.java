@@ -30,7 +30,6 @@ public class HomeActivity extends AppCompatActivity {
 
     String TAG = getClass().getSimpleName();
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    //String TAG = "HomeActivity";
     ImageButton likefloatingbutton;
 
     private DatabaseReference mPostReference;
