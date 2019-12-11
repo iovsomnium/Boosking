@@ -16,6 +16,7 @@ public class ChangeTimetableActivity extends AppCompatActivity {
 
     InputMethodManager imm;
     Spinner date,period;
+    String changedate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,7 @@ public class ChangeTimetableActivity extends AppCompatActivity {
         datearray.add("목요일");
         datearray.add("금요일");
 
-        ArrayList periodarray = new ArrayList<>();
+        final ArrayList periodarray = new ArrayList<>();
         periodarray.add("1교시");
         periodarray.add("2교시");
         periodarray.add("3교시");
@@ -53,8 +54,34 @@ public class ChangeTimetableActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 imm.hideSoftInputFromWindow(date.getWindowToken(), 0);
-                        Toast.makeText(getApplicationContext(),datearray.get(i)+"가 선택되었습니다.",
+                String q = datearray.get(i).toString();
+                switch(q) {
+                    case "월요일":
+                        changedate = "monday";
+                        Toast.makeText(getApplicationContext(),changedate+"",
                                 Toast.LENGTH_SHORT).show();
+                        break;
+                    case "화요일":
+                        changedate = "tuesday";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "수요일":
+                        changedate = "wendsday";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "목요일":
+                        changedate = "thuresday";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                    case "금요일":
+                        changedate += "friday";
+                        Toast.makeText(getApplicationContext(),changedate+"",
+                                Toast.LENGTH_SHORT).show();
+                        break;
+                }
             }
 
             @Override
