@@ -64,14 +64,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        timetable.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent list = new Intent(getApplicationContext(),HomeActivity.class);
-                startActivity(list);
-            }
-        });
-
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +93,6 @@ public class HomeActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds: dataSnapshot.getChildren()){
                     String name = ""+ ds.child("name").getValue();
-
                     teachername.setText(name);
                 }
             }
@@ -220,10 +211,10 @@ public class HomeActivity extends AppCompatActivity {
                     }
                 });
 
-        CollectionReference user = db.collection("Teachers");
+        CollectionReference user = db.collection("Timetable");
 
         for(int i=1;i<35;i++){
-            DocumentReference docRef = db.collection("Teachers").document("data"+i+"");
+            DocumentReference docRef = db.collection("Timetable").document("data"+i+"");
             final int I = i;
             docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                 @Override

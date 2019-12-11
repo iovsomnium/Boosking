@@ -1,15 +1,15 @@
 package com.example.che_ti_bleEX;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.solver.widgets.Snapshot;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.LinearLayout;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,6 +27,7 @@ public class UserActivity extends AppCompatActivity implements UserAdapter.OnUse
     private ArrayList<Teacher> arrayList;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
+    LinearLayout usertimetable, userchat, userset;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,24 @@ public class UserActivity extends AppCompatActivity implements UserAdapter.OnUse
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         arrayList = new ArrayList<>();  //User 객체를 담을 어레이 리스트(어댑터쪽으로)
+        usertimetable =(LinearLayout)findViewById(R.id.usertimetable);
+        userchat =(LinearLayout)findViewById(R.id.userchat);
+        userset =(LinearLayout) findViewById(R.id.userset);
+
+        usertimetable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent usertimetable = new Intent(getApplicationContext(),HomeActivity.class);
+                startActivity(usertimetable);
+            }
+        });
+        userset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent userset = new Intent(getApplicationContext(),SettingActivity.class);
+                startActivity(userset);
+            }
+        });
 
         firebaseDatabase = FirebaseDatabase.getInstance();
 

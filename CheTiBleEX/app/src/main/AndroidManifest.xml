@@ -17,18 +17,21 @@
         <activity android:name=".UserActivity" />
         <activity android:name=".Showtimetable" />
         <activity android:name=".HomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SignupActivity" />
         <activity android:name=".ChatActivity"></activity>
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashActivity"></activity>
+            android:theme="@style/SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".MainActivity" />
     </application>
 

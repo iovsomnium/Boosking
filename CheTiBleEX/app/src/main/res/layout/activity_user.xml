@@ -28,7 +28,7 @@
         android:id="@+id/menu">
 
         <LinearLayout
-            android:id="@+id/timetable"
+            android:id="@+id/usertimetable"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -51,7 +51,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/chat"
+            android:id="@+id/userchat"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -74,7 +74,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/set"
+            android:id="@+id/userset"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"

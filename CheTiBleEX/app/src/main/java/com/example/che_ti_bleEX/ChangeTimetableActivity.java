@@ -10,18 +10,34 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ChangeTimetableActivity extends AppCompatActivity {
 
     InputMethodManager imm;
     Spinner date,period;
     String changedate;
+    String changetime;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        CollectionReference timetable = db.collection("Timetable");
+
+        Map<String, Object> data1 = new HashMap<>();
+        data1.put("name", "직B");
+        data1.put("teacher1", "바뀜정문정");
+        data1.put("teacher2", "");
         setContentView(R.layout.activity_change_timetable);
+
+        data1.put("date", "monday1");
+        timetable.document("data1").set(data1);
 
         imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
 
@@ -97,38 +113,45 @@ public class ChangeTimetableActivity extends AppCompatActivity {
                 String r = periodarray.get(i).toString();
                 switch(r) {
                     case "1교시":
-                        changedate += "1";
-                        Toast.makeText(getApplicationContext(),changedate+"",
+                        changetime = changedate;
+                        changetime += "1";
+                        Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "2교시":
-                        changedate += "2";
-                        Toast.makeText(getApplicationContext(),changedate+"",
+                        changetime =changedate;
+                        changetime += "2";
+                        Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "3교시":
-                        changedate += "3";
-                        Toast.makeText(getApplicationContext(),changedate+"",
+                        changetime =changedate;
+                        changetime += "3";
+                        Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "4교시":
-                        changedate += "4";
-                        Toast.makeText(getApplicationContext(),changedate+"",
+                        changetime =changedate;
+                        changetime += "4";
+                        Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "5교시":
-                        changedate += "5";
-                        Toast.makeText(getApplicationContext(),changedate+"",
+                        changetime =changedate;
+                        changetime += "5";
+                        Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "6교시":
-                        changedate += "6";
-                        Toast.makeText(getApplicationContext(),changedate+"",
+                        changetime =changedate;
+                        changetime += "6";
+                        Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                     case "7교시":
-                        changedate += "7";
-                        Toast.makeText(getApplicationContext(),changedate+"",
+                        changetime =changedate;
+                        changetime += "7";
+                        Toast.makeText(getApplicationContext(),changetime+"",
                                 Toast.LENGTH_SHORT).show();
                         break;
                 }
