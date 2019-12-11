@@ -14,7 +14,8 @@ https://hyeonstorage.tistory.com/153 이거 한번 참고 해보는것을 추천
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
 
         <ImageButton
             android:id="@+id/btnFinish"
