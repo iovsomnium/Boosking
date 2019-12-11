@@ -26,8 +26,8 @@
         android:layout_width="400dp"
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
-        android:hint="Name"
         android:fontFamily="@font/fonthanna"
+        android:background="@drawable/spinner_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text1" />
@@ -37,9 +37,9 @@
         android:layout_width="400dp"
         android:layout_height="0dp"
         android:layout_marginTop="58dp"
-        android:hint="Email Adress"
         android:fontFamily="@font/fonthanna"
         android:inputType="textEmailAddress"
+        android:background="@drawable/spinner_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/date" />
@@ -49,9 +49,9 @@
         android:layout_width="400dp"
         android:layout_height="0dp"
         android:layout_marginTop="58dp"
-        android:hint="What you want change Subject"
         android:inputType="text"
         android:fontFamily="@font/fonthanna"
+        android:background="@drawable/spinner_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/period" />
@@ -62,17 +62,17 @@
         android:layout_width="310dp"
         android:layout_height="0dp"
         android:background="@drawable/boldcellshpae"
-        android:text="Change"
         android:fontFamily="@font/fonthanna"
+        android:text="Change"
         android:textColor="@color/colorBlack"
         android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.442"
-        app:layout_constraintDimensionRatio="5"/>
+        app:layout_constraintTop_toBottomOf="@+id/changesubject"
+        app:layout_constraintVertical_bias="0.442" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

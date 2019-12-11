@@ -164,7 +164,7 @@
                     android:text="월"
                     android:textSize="15sp"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"/>
+                    android:fontFamily="@font/fontjua"/>
                 <TextView
                     android:text="화"
                     android:textSize="15sp"
@@ -174,7 +174,7 @@
                     android:gravity="center"
                     android:textColor="#000000"
                     android:background="@drawable/cellshape"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:id="@+id/tuesday1"/>
                 <TextView
                     android:text="수"
@@ -184,7 +184,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/wendsday1"/>
 
@@ -196,7 +196,7 @@
                     android:background="@drawable/cellshape"
                     android:gravity="center"
                     android:text="목"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:textColor="@color/colorBlack"
                     android:textSize="15sp" />
 
@@ -208,7 +208,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/friday1"/>
 
@@ -237,7 +237,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/monday2"/>
                 <TextView
@@ -248,7 +248,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/tuesday2"/>
 
@@ -260,7 +260,7 @@
                     android:background="@drawable/cellshape"
                     android:gravity="center"
                     android:text="수"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:textColor="@color/colorBlack"
                     android:textSize="15sp" />
 
@@ -272,7 +272,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/thuresday2"/>
 
@@ -284,7 +284,7 @@
                     android:background="@drawable/cellshape"
                     android:gravity="center"
                     android:text="금"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:textColor="@color/colorBlack"
                     android:textSize="15sp" />
 
@@ -313,7 +313,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/monday3"/>
                 <TextView
@@ -324,7 +324,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/tuesday3"/>
                 <TextView
@@ -335,7 +335,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/wendsday3"/>
                 <TextView
@@ -346,7 +346,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/thuresday3"/>
                 <TextView
@@ -357,7 +357,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/friday3"/>
 
@@ -387,7 +387,7 @@
                     android:background="@drawable/cellshape"
                     android:gravity="center"
                     android:text="월"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:textColor="@color/colorBlack"
                     android:textSize="15sp" />
 
@@ -399,7 +399,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/tuesday4"/>
 
@@ -411,7 +411,7 @@
                     android:background="@drawable/cellshape"
                     android:gravity="center"
                     android:text="수"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:textColor="@color/colorBlack"
                     android:textSize="15sp" />
 
@@ -423,7 +423,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/thuresday4"/>
                 <TextView
@@ -434,7 +434,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/friday4"/>
 
@@ -479,7 +479,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/monday5"/>
                 <TextView
@@ -490,7 +490,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/tuesday5"/>
                 <TextView
@@ -501,7 +501,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/wendsday5"/>
                 <TextView
@@ -512,7 +512,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/thuresday5"/>
                 <TextView
@@ -523,7 +523,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/friday5"/>
 
@@ -553,7 +553,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/monday6"/>
                 <TextView
@@ -564,7 +564,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/tuesday6"/>
                 <TextView
@@ -575,7 +575,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/wendsday6"/>
                 <TextView
@@ -586,7 +586,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/thuresday6"/>
                 <TextView
@@ -597,7 +597,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/friday6"/>
 
@@ -626,7 +626,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/monday7"/>
                 <TextView
@@ -637,7 +637,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/tuesday7"/>
                 <TextView
@@ -648,7 +648,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/wendsday7"/>
                 <TextView
@@ -659,7 +659,7 @@
                     android:layout_weight="3"
                     android:gravity="center"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"
                     android:id="@+id/thuresday7"/>
                 <ImageButton
@@ -705,7 +705,7 @@
                 android:text="시간표"
                 android:textColor="@color/colorBlack"
                 android:textSize="25dp"
-                android:fontFamily="@font/fonthanna"/>
+                android:fontFamily="@font/fontjua"/>
 
         </LinearLayout>
 
@@ -728,7 +728,7 @@
                 android:text="채팅"
                 android:textColor="@color/colorBlack"
                 android:textSize="25dp"
-                android:fontFamily="@font/fonthanna"/>
+                android:fontFamily="@font/fontjua"/>
 
         </LinearLayout>
 
@@ -751,7 +751,7 @@
                 android:text="설정"
                 android:textColor="@color/colorBlack"
                 android:textSize="25dp"
-                android:fontFamily="@font/fonthanna"/>
+                android:fontFamily="@font/fontjua"/>
 
         </LinearLayout>
 
