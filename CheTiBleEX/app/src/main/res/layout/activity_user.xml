@@ -12,7 +12,7 @@
         android:id="@+id/upsideBar"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#fff"
+        android:background="@color/colorWhite"
         android:orientation="horizontal"
         android:gravity="center"
         android:elevation="5dp">
@@ -73,7 +73,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"
@@ -96,7 +96,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"
@@ -119,7 +119,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"
