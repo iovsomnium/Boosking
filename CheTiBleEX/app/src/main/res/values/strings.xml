@@ -4,4 +4,20 @@
     <string name="Hello">Hello!</string>
     <string name="userName">- %1$s -</string>
     <string name="otherUserName">$s</string>
+    <string-array name="date">
+        <item>월요일</item>
+        <item>화요일</item>
+        <item>수요일</item>
+        <item>목요일</item>
+        <item>금요일</item>
+    </string-array>
+    <string-array name="period">
+        <item>1교시</item>
+        <item>2교시</item>
+        <item>3교시</item>
+        <item>4교시</item>
+        <item>5교시</item>
+        <item>6교시</item>
+        <item>7교시</item>
+    </string-array>
 </resources>
