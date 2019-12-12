@@ -21,7 +21,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/fonthanna"
+            android:fontFamily="@font/fontjua"
             android:text="Che.Ti.Ble"
             android:textColor="@color/colorBlack"
             android:textSize="36dp"

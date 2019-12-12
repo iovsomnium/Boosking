@@ -48,6 +48,8 @@ public class UserActivity extends AppCompatActivity implements UserAdapter.OnUse
             public void onClick(View view) {
                 Intent usertimetable = new Intent(getApplicationContext(),HomeActivity.class);
                 startActivity(usertimetable);
+
+                overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_in_right);
             }
         });
         userset.setOnClickListener(new View.OnClickListener() {
@@ -55,6 +57,8 @@ public class UserActivity extends AppCompatActivity implements UserAdapter.OnUse
             public void onClick(View view) {
                 Intent userset = new Intent(getApplicationContext(),SettingActivity.class);
                 startActivity(userset);
+
+                overridePendingTransition(R.anim.anim_slide_out_right, R.anim.anim_slide_out_left);
             }
         });
 

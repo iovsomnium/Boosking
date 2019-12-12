@@ -67,6 +67,8 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent chat = new Intent(getApplicationContext(),UserActivity.class);
                 startActivity(chat);
+
+                overridePendingTransition(R.anim.anim_slide_out_right, R.anim.anim_slide_out_left);
             }
         });
 
@@ -75,6 +77,8 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent set = new Intent(getApplicationContext(),SettingActivity.class);
                 startActivity(set);
+
+                overridePendingTransition(R.anim.anim_slide_out_right, R.anim.anim_slide_out_left);
             }
         });
 
@@ -246,6 +250,8 @@ public class HomeActivity extends AppCompatActivity {
     public void onBackPressed(){
         if(backKeyPressedTwice) {
             super.onBackPressed();
+            finish();
+            System.exit(0);
             return;
         }
 

@@ -22,21 +22,26 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
             android:id="@+id/user_sub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:text="Node js"
+            android:fontFamily="@font/fontjua"
             android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
+            android:layout_marginBottom="8dp"
             android:id="@+id/user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:includeFontPadding="false"
             android:text="최연진"
+            android:fontFamily="@font/fontjua"
             android:textColor="@color/colorBlack"
             android:textSize="26sp" />
     </LinearLayout>

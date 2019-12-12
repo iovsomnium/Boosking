@@ -9,20 +9,21 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/upsideBar"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="#fff"
-        android:orientation="horizontal"
+        android:elevation="5dp"
         android:gravity="center"
-        android:elevation="5dp">
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-196dp">
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/fonthanna"
+            android:fontFamily="@font/fontjua"
             android:text="Che.Ti.Ble"
             android:textColor="@color/colorBlack"
             android:textSize="36dp"
@@ -36,16 +37,31 @@
             android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/fontjua"
             android:gravity=""
             android:text="user"
             android:textColor="@color/colorBlack"
-            android:fontFamily="@font/fonthanna"
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.646"
             app:layout_constraintStart_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.375" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fontjua"
+            android:gravity=""
+            android:text="선생님"
+            android:textColor="@color/colorBlack"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.722"
+            app:layout_constraintStart_toEndOf="@+id/username"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.375" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -84,7 +100,7 @@
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
                     android:textSize="22sp"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
 
                 <TextView
@@ -96,7 +112,7 @@
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
                     android:textSize="22sp"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
 
                 <TextView
@@ -108,7 +124,7 @@
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
                     android:textSize="22sp"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
 
                 <TextView
@@ -120,7 +136,7 @@
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
                     android:textSize="22sp"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
 
                 <TextView
@@ -132,7 +148,7 @@
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
                     android:textSize="22sp"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
 
             </TableRow>
@@ -152,7 +168,7 @@
                     android:text="1교시"
                     android:textColor="@color/colorBlack"
                     android:textSize="20dp"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:textStyle="bold" />
 
                 <TextView
@@ -228,7 +244,7 @@
                     android:text="2교시"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
                 <TextView
                     android:text="월"
@@ -304,7 +320,7 @@
                     android:text="3교시"
                     android:textStyle="bold"
                     android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
                 <TextView
                     android:text="월"
@@ -378,7 +394,7 @@
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
                     android:background="@drawable/cellshape"
-                    android:fontFamily="@font/fonthanna"/>
+                    android:fontFamily="@font/fontjua"/>
 
                 <TextView
                     android:id="@+id/monday4"
@@ -454,7 +470,7 @@
                     android:textStyle="bold"
                     android:textSize="15sp"
                     android:gravity="center"
-                    android:fontFamily="@font/fonthanna"/>
+                    android:fontFamily="@font/fontjua"/>
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
@@ -470,7 +486,7 @@
                     android:text="5교시"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
                 <TextView
                     android:text="월"
@@ -544,7 +560,7 @@
                     android:text="6교시"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
                 <TextView
                     android:text="월"
@@ -617,7 +633,7 @@
                     android:text="7교시"
                     android:textColor="@color/colorBlack"
                     android:textStyle="bold"
-                    android:fontFamily="@font/fonthanna"
+                    android:fontFamily="@font/fontjua"
                     android:background="@drawable/cellshape"/>
                 <TextView
                     android:text="월"

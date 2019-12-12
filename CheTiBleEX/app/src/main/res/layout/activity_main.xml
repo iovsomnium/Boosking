@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="310dp"
@@ -24,7 +23,6 @@
         android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:hint="ID"
-        android:fontFamily="@font/fonthanna"
         android:textColorHint="@color/colorBlack"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +52,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorBlack"
         android:textSize="25sp"
-        android:fontFamily="@font/fonthanna"
+        android:fontFamily="@font/fontjua"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password" />
@@ -64,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:fontFamily="@font/fonthanna"
+        android:fontFamily="@font/fontjua"
         android:text="or"
         android:textColor="@color/colorBlack"
         android:textSize="20sp"
@@ -79,7 +77,7 @@
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:background="@drawable/boldcellshpae"
-        android:fontFamily="@font/fonthanna"
+        android:fontFamily="@font/fontjua"
         android:text="Sign up"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/colorBlack"

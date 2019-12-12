@@ -23,6 +23,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent settime = new Intent(getApplicationContext(),HomeActivity.class);
                 startActivity(settime);
+                overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_in_right);
             }
         });
 
@@ -31,6 +32,7 @@ public class SettingActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent setchat = new Intent(getApplicationContext(),UserActivity.class);
                 startActivity(setchat);
+                overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_in_right);
             }
         });
 
