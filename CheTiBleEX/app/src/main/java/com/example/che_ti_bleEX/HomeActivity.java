@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -40,7 +41,17 @@ public class HomeActivity extends AppCompatActivity {
     FirebaseUser user;
     FirebaseDatabase firebaseDatabase;
 
-    TextView teachername;
+    TextView teachername,table;
+
+    TextView monday1,tuesday1,wendsday1,thuresday1,friday1;
+    TextView monday2,tuesday2,wendsday2,thuresday2,friday2;
+    TextView monday3,tuesday3,wendsday3,thuresday3,friday3;
+    TextView monday4,tuesday4,wendsday4,thuresday4,friday4;
+    TextView monday5,tuesday5,wendsday5,thuresday5,friday5;
+    TextView monday6,tuesday6,wendsday6,thuresday6,friday6;
+    TextView monday7,tuesday7,wendsday7,thuresday7,friday7;
+    Button original;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +64,142 @@ public class HomeActivity extends AppCompatActivity {
         chat = (LinearLayout)findViewById(R.id.chat);
         set = (LinearLayout)findViewById(R.id.set);
         likefloatingbutton = (ImageButton)findViewById(R.id.likefloatingbutton);
+        original = (Button)findViewById(R.id.original);
+        table = (TextView)findViewById(R.id.table);
+
+        table.setText("변경 시간표");
+
+        original.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            table.setText("본 시간표");
+                                            for (int i = 1; i < 35; i++) {
+                                                DocumentReference docRef = db.collection("Timetable").document("data" + i + "");
+                                                final int I = i;
+                                                docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                                        if (task.isSuccessful()) {
+                                                            DocumentSnapshot document = task.getResult();
+                                                            if (document.exists()) {
+                                                                String data = document.getData().get("name") + "\n" + document.getData().get("teacher1") + " " + document.getData().get("teacher2");
+                                                                //Log.d(TAG, "DocumentSnapshot data: " + document.getData().get("name")+"\n"+document.getData().get("teacher1")+" "+document.getData().get("teacher2"));
+
+                                                                switch (I) {
+                                                                    case 1:
+                                                                        monday1.setText(data);
+                                                                        break;
+                                                                    case 2:
+                                                                        monday2.setText(data);
+                                                                        break;
+                                                                    case 3:
+                                                                        monday3.setText(data);
+                                                                        break;
+                                                                    case 4:
+                                                                        monday4.setText(data);
+                                                                        break;
+                                                                    case 5:
+                                                                        monday5.setText(data);
+                                                                        break;
+                                                                    case 6:
+                                                                        monday6.setText(data);
+                                                                        break;
+                                                                    case 7:
+                                                                        monday7.setText(data);
+                                                                        break;
+                                                                    case 8:
+                                                                        tuesday1.setText(data);
+                                                                        break;
+                                                                    case 9:
+                                                                        tuesday2.setText(data);
+                                                                        break;
+                                                                    case 10:
+                                                                        tuesday3.setText(data);
+                                                                        break;
+                                                                    case 11:
+                                                                        tuesday4.setText(data);
+                                                                        break;
+                                                                    case 12:
+                                                                        tuesday5.setText(data);
+                                                                        break;
+                                                                    case 13:
+                                                                        tuesday6.setText(data);
+                                                                        break;
+                                                                    case 14:
+                                                                        tuesday7.setText(data);
+                                                                        break;
+                                                                    case 15:
+                                                                        wendsday1.setText(data);
+                                                                        break;
+                                                                    case 16:
+                                                                        wendsday2.setText(data);
+                                                                        break;
+                                                                    case 17:
+                                                                        wendsday3.setText(data);
+                                                                        break;
+                                                                    case 18:
+                                                                        wendsday4.setText(data);
+                                                                        break;
+                                                                    case 19:
+                                                                        wendsday5.setText(data);
+                                                                        break;
+                                                                    case 20:
+                                                                        wendsday6.setText(data);
+                                                                        break;
+                                                                    case 21:
+                                                                        wendsday7.setText(data);
+                                                                        break;
+                                                                    case 22:
+                                                                        thuresday1.setText(data);
+                                                                        break;
+                                                                    case 23:
+                                                                        thuresday2.setText(data);
+                                                                        break;
+                                                                    case 24:
+                                                                        thuresday3.setText(data);
+                                                                        break;
+                                                                    case 25:
+                                                                        thuresday4.setText(data);
+                                                                        break;
+                                                                    case 26:
+                                                                        thuresday5.setText(data);
+                                                                        break;
+                                                                    case 27:
+                                                                        thuresday6.setText(data);
+                                                                        break;
+                                                                    case 28:
+                                                                        thuresday7.setText(data);
+                                                                        break;
+                                                                    case 29:
+                                                                        friday1.setText(data);
+                                                                        break;
+                                                                    case 30:
+                                                                        friday2.setText(data);
+                                                                        break;
+                                                                    case 31:
+                                                                        friday3.setText(data);
+                                                                        break;
+                                                                    case 32:
+                                                                        friday4.setText(data);
+                                                                        break;
+                                                                    case 33:
+                                                                        friday5.setText(data);
+                                                                        break;
+                                                                    case 34:
+                                                                        friday6.setText(data);
+                                                                        break;
+                                                                }
+                                                            } else {
+                                                                Log.d(TAG, "No such document");
+                                                            }
+                                                        } else {
+                                                            Log.d(TAG, "get failed with ", task.getException());
+                                                        }
+                                                    }
+                                                });
+                                            }
+                                        }
+            });
 
         likefloatingbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,14 +252,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        final TextView monday1,tuesday1,wendsday1,thuresday1,friday1;
-        final TextView monday2,tuesday2,wendsday2,thuresday2,friday2;
-        final TextView monday3,tuesday3,wendsday3,thuresday3,friday3;
-        final TextView monday4,tuesday4,wendsday4,thuresday4,friday4;
-        final TextView monday5,tuesday5,wendsday5,thuresday5,friday5;
-        final TextView monday6,tuesday6,wendsday6,thuresday6,friday6;
-        final TextView monday7,tuesday7,wendsday7,thuresday7,friday7;
-
         monday1 = (TextView)findViewById(R.id.monday1);
         monday2 = (TextView)findViewById(R.id.monday2);
         monday3 = (TextView)findViewById(R.id.monday3);
@@ -161,14 +300,17 @@ public class HomeActivity extends AppCompatActivity {
                         DocumentSnapshot document = task.getResult();
                         if (document.exists()) {
                             String data = document.getData().get("name")+"\n"+document.getData().get("teacher1")+" "+document.getData().get("teacher2");
-                            Log.d(TAG, "DocumentSnapshot data: " + document.getData().get("name")+"\n"+document.getData().get("teacher1")+" "+document.getData().get("teacher2"));
+                            //Log.d(TAG, "DocumentSnapshot data: " + document.getData().get("name")+"\n"+document.getData().get("teacher1")+" "+document.getData().get("teacher2"));
 
                             switch(I) {
-                                case 1: monday1.setText(data);
+                                case 1:
+                                    monday1.setText(data);
                                     break;
-                                case 2: monday2.setText(data);
+                                case 2:
+                                    monday2.setText(data);
                                     break;
-                                case 3: monday3.setText(data);
+                                case 3:
+                                    monday3.setText(data);
                                     break;
                                 case 4: monday4.setText(data);
                                     break;
@@ -242,8 +384,8 @@ public class HomeActivity extends AppCompatActivity {
                 }
             });
         }
-
     }
+
     private boolean backKeyPressedTwice = false;
 
     @Override
