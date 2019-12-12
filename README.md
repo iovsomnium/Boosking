@@ -7,8 +7,8 @@
 ### 의미 : Change Time Table의 약어 / 시간표 앱
 
 ## ❔ Purpose
-In the school, Our team watched Korea history teacher changeing timetable. I was thought that is look so difficult, so we want change that system, throught phone
-  학교에서 선생님들이 시간표를 교체하실 때마다 어려움을 겪는 모습을 보고 좀 더 쉽게 시간표를 교체 할수있지 않을까 라는 고민부터 우리한테는 없지만 선생님들 한테는 모두 있는 스마트폰을 활용해 보는 것은 어떨까라는 생각에서 출발한 아이디어 입니다.
+In the school, Our team watched Korea history teacher changeing timetable. I was thought that is look so difficult, so we want change that system, throught phone.
+학교에서 선생님들이 시간표를 교체하실 때마다 어려움을 겪는 모습을 보고 좀 더 쉽게 시간표를 교체 할수있지 않을까 라는 고민부터 우리한테는 없지만 선생님들 한테는 모두 있는 스마트폰을 활용해 보는 것은 어떨까라는 생각에서 출발한 아이디어 입니다.
   
 
 ## 🎁 Function
