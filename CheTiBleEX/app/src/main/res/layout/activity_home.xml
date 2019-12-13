@@ -12,7 +12,7 @@
         android:id="@+id/upsideBar"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#fff"
+        android:background="@color/colorWhite"
         android:elevation="5dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -100,6 +100,7 @@
             android:layout_marginStart="16dp"
             android:fontFamily="@font/fontjua"
             android:text="본 시간표 불러오기"
+            android:textColor="@color/colorBlack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintHorizontal_bias="0.0"
@@ -233,7 +234,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:textColor="#000000"
+                    android:textColor="@color/colorBlack"
                     android:background="@drawable/cellshape"
                     android:fontFamily="@font/fontjua"
                     android:id="@+id/tuesday1"/>
@@ -799,7 +800,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"

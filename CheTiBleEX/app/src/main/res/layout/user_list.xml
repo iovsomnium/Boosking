@@ -6,7 +6,7 @@
     android:padding="8dp"
     android:gravity="center_vertical"
     android:layout_marginBottom="8dp"
-    android:background="@drawable/scarebuttonshape">
+    android:background="@color/colorWhite">
 
     <LinearLayout
         android:id="@+id/tc_info"
@@ -30,7 +30,7 @@
             android:includeFontPadding="false"
             android:text="Node js"
             android:fontFamily="@font/fontjua"
-            android:textColor="#000000"
+            android:textColor="@color/colorBlack"
             android:textSize="30sp"
             android:textStyle="bold" />
 

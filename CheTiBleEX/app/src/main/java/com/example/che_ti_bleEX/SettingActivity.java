@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class SettingActivity extends AppCompatActivity {
 
     LinearLayout settimetable,setchat;
+    Button changeDarkMode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +21,7 @@ public class SettingActivity extends AppCompatActivity {
 
         settimetable = (LinearLayout)findViewById(R.id.settimetable);
         setchat = (LinearLayout)findViewById(R.id.setchat);
+        changeDarkMode = (Button)findViewById(R.id.btnDarkmode);
 
         settimetable.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +38,14 @@ public class SettingActivity extends AppCompatActivity {
                 Intent setchat = new Intent(getApplicationContext(),UserActivity.class);
                 startActivity(setchat);
                 overridePendingTransition(R.anim.anim_slide_in_left, R.anim.anim_slide_in_right);
+            }
+        });
+
+        changeDarkMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent changedarkmode = new Intent(getApplicationContext(), DarkModeActivity.class);
+                startActivity(changedarkmode);
             }
         });
 

@@ -109,7 +109,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"
@@ -132,7 +132,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"
@@ -155,7 +155,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#fff">
+            android:background="@color/colorWhite">
 
             <ImageView
                 android:layout_width="70dp"
