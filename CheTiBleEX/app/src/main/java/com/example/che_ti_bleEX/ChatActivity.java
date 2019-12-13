@@ -62,8 +62,6 @@ public class ChatActivity extends AppCompatActivity {
                     Toast.makeText(ChatActivity.this,"내용을 입력해주세요", Toast.LENGTH_SHORT).show();
 
                 }else {
-                    Toast.makeText(ChatActivity.this,email+","+ stText, Toast.LENGTH_SHORT).show();
-
                     Calendar c = Calendar.getInstance().getInstance();
 
                     SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HHLmm:ss");
