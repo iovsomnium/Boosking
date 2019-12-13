@@ -17,21 +17,7 @@
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-196dp">
-
-        <Button
-            android:id="@+id/original"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/fontjua"
-            android:text="본 시간표 불러오기"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintHorizontal_bias="0.02"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="MissingConstraints"></Button>
+        tools:layout_editor_absoluteX="0dp">
 
         <TextView
             android:id="@+id/textView2"
@@ -86,7 +72,7 @@
             android:textColor="@color/colorBlack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintHorizontal_bias="0.101"
+            app:layout_constraintHorizontal_bias="0.36"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.833" />
@@ -101,11 +87,25 @@
             android:textColor="@color/colorBlack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.688"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.833"
             tools:ignore="InvalidId" />
+
+        <Switch
+            android:id="@+id/original"
+            android:layout_width="149dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/fontjua"
+            android:text="본 시간표 불러오기"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.15" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

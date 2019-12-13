@@ -2,8 +2,10 @@ package com.example.che_ti_bleEX;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,4 +39,28 @@ public class SettingActivity extends AppCompatActivity {
         });
 
     }
+
+    private boolean backKeyPressedTwice = false;
+
+    @Override
+    public void onBackPressed(){
+        if(backKeyPressedTwice) {
+            super.onBackPressed();
+            finishAffinity();
+            System.runFinalization();
+            System.exit(0);
+            return;
+        }
+
+        backKeyPressedTwice = true;
+        Toast.makeText(this, "한번 더 누를시 종료됩니다.", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                backKeyPressedTwice=false;
+            }
+        }, 2000);
+    }
+
 }
