@@ -16,8 +16,8 @@ In the school, Our team watched teacher changeing timetable. when I was thought 
 - 시간표 표시 / Show TimeTable
 - 시간표 교체 / Change TimeTable
 - 채팅 / Chatting
+- 다크모드 지원 / Dark Mode
 - 그외 설정 등등 / and more setting and etc....
-
 
 ## 👏 GroupMember / 조원
 ### Project Group
