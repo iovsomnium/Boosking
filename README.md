@@ -26,4 +26,4 @@ In the school, Our team watched teacher changeing timetable. when I was thought 
 
 ## 🤔 Result / 결과물
 - firebase의 기간 만료로 인한 상세한 이미지 제공 불가
-<img width="551" alt="스크린샷 2020-09-07 오후 5 20 57" src="https://user-images.githubusercontent.com/51693390/92365477-daced880-f12e-11ea-8014-ab21f82adf53.png">
+<img width="200" alt="스크린샷 2020-09-07 오후 5 20 57" src="https://user-images.githubusercontent.com/51693390/92365477-daced880-f12e-11ea-8014-ab21f82adf53.png">
