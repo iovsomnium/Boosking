@@ -25,4 +25,5 @@ In the school, Our team watched teacher changeing timetable. when I was thought 
 - 👩Choi-YeonJin (https://github.com/Choi-YeonJin) : Back-end 
 
 ## 🤔 Result / 결과물
-- 이미지 업로드 예정
+- firebase의 기간 만료로 인한 상세한 이미지 제공 불가
+
