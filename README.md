@@ -21,8 +21,8 @@ In the school, Our team watched teacher changeing timetable. when I was thought 
 
 ## 👏 GroupMember / 조원
 ### Project Group
-- 🧑iov somnimum (https://github.com/iovsomnium) : Front-end, design
-- 👩Choi-YeonJin (https://github.com/Choi-YeonJin) : Back-end 
+- 🧑`iov somnimum` (https://github.com/iovsomnium) : Front-end, design
+- 👩`Choi-YeonJin` (https://github.com/Choi-YeonJin) : Back-end 
 
 ## 🤔 Result / 결과물
 - firebase의 기간 만료로 인한 상세한 이미지 제공 불가
