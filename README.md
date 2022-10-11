@@ -1,5 +1,5 @@
-#  Before you see this project
-## writer want practice English so write with English. When you read this, little bit look so weird cause I don't used translate I ask for understanding on that point. Thanks.
+##  Before you see this project
+### writer want practice English so write with English. When you read this, little bit look so weird cause I don't used translate I ask for understanding on that point. Thanks.
 
 # Project : Che.Ti.Ble / 프로젝트 : 체티블
 ### Mean : Shot for Change, Time Table / Time Table app
