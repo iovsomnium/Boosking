@@ -21,8 +21,8 @@ In the school, Our team watched teacher changeing timetable. when I was thought 
 - 👩`Choi-YeonJin` (https://github.com/Choi-YeonJin) : Back-end 
 
 ## Result / 결과물
-``` firebase의 기간 만료로 인한 상세한 이미지 제공 불가합니다. ```
+- firebase의 기간 만료로 인한 상세한 이미지 제공 불가합니다. 
 <img width="200" alt="스크린샷 2020-09-07 오후 5 20 57" src="https://user-images.githubusercontent.com/51693390/92365477-daced880-f12e-11ea-8014-ab21f82adf53.png">
 
 ## 프로젝트 시작법 / how to start project
-``` 현재 firebase 기간 만료로 실행 할 수 없습니다.  ```
+- 현재 firebase 기간 만료로 실행 할 수 없습니다. 
