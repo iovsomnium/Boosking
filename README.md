@@ -1,10 +1,8 @@
-##  Before you see this project
-### writer want practice English so write with English. When you read this, little bit look so weird cause I don't used translate I ask for understanding on that point. Thanks.
-
 # Project : Che.Ti.Ble / 프로젝트 : 체티블
 ### Mean : Shot for Change, Time Table / Time Table app
 
 ##  Purpose
+학교에서 선생님들이 시간표를 바꾸실때 불편함을 느끼시는걸 포착하였습니다. 이러한 복잡함을 어플리케이션으로 해결하면 어떨까 싶어 구현하게 되었습니다.
 In the school, Our team watched teacher changeing timetable. when I was thought that is look so difficult, so we want change that system, throught phone.
   
 
